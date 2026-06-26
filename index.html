@@ -200,8 +200,8 @@ MODEL NOTES FOR FUTURE MAINTAINERS / AI
   <button type="button" onclick="clearSavedState()" style="background:#fff;border:1px solid #bfdbfe;border-radius:6px;padding:3px 10px;font-size:11.5px;color:#1d4ed8;cursor:pointer;white-space:nowrap">清除並重設</button>
 </div>
 <div id="font-zoom-bar" style="background:#fff;border:1px solid #d8d8d0;border-radius:10px;box-shadow:0 1px 4px rgba(0,0,0,.06);padding:8px 12px;margin-bottom:12px;display:flex;align-items:center;gap:8px">
-  <span style="font-size:14px;font-weight:400;color:#1e3a5f;white-space:nowrap">字體</span>
-  <input type="range" id="zoom-slider" min="0" max="8" step="1" value="0" oninput="setFontZoomByIndex(this.value)" style="flex:1 1 auto;min-width:0">
+  <span style="font-size:14px;font-weight:400;color:#1e3a5f;white-space:nowrap">字體放大</span>
+  <input type="range" id="zoom-slider" min="0" max="10" step="1" value="0" oninput="setFontZoomByIndex(this.value)" style="flex:1 1 auto;min-width:0">
   <span id="zoom-pct-label" style="font-size:11.5px;color:#1d4ed8;font-weight:700;min-width:34px;text-align:right">100%</span>
 </div>
 
@@ -910,7 +910,7 @@ function renderSnapshots(){
   }).join('');
 }
 
-var ZOOM_LEVELS=[100,150,200,250,300,350,400,450,500];
+var ZOOM_LEVELS=[100,115,130,145,160,175,190,205,220,235,250];
 function setFontZoomByIndex(idx){
   var pct=ZOOM_LEVELS[parseInt(idx)];
   setFontZoom(pct);
